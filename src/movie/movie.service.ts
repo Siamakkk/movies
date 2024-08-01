@@ -14,7 +14,6 @@ export class MovieService {
 
   public async findManyAndCount(pagination: PaginationInput): Promise<[Movie[], number]> {
     const queryBuilder = this.movieRepository.createQueryBuilder('movie')
-    console.log(pagination)
     addPagination(queryBuilder, pagination)
 
     return queryBuilder.getManyAndCount()
