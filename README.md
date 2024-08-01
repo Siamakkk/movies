@@ -38,4 +38,4 @@ The application should now be available on `http://localhost:3000` and you shoul
 
 ### Handing in Your Solution
 
-Fork the repository to your GitHub account, or create a new public repository and send us a link to it.
+Create a new public repository and send us a link to it
