@@ -40,4 +40,15 @@ describe('AppController (e2e)', () => {
     expect(res.status).toBe(400)
     expect(res.body.results).toBe(undefined)
   })
+
+  it('/movie (GET) with searchTerm', async () => {
+    const res = await request(app.getHttpServer()).get('/movie').query({
+      page: 1,
+      limit: 10,
+      searchTerm: 'caribbean'
+    })
+
+    expect(res.body.results).toBeInstanceOf(Array)
+    expect(res.body.results.length).toBeGreaterThan(1)
+  })
 })
